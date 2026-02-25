@@ -222,3 +222,13 @@ textarea {
 #form-status.error {
     color: #f44336;
 }
+
+.comments-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: left;
+}
+
+.comments-section h3 {
+    text-align: center;
+}

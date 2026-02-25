@@ -73,7 +73,7 @@ if (contactForm) {
         // Visual feedback
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalBtnText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
+        submitBtn.textContent = '보내는 중...';
         submitBtn.disabled = true;
 
         try {
@@ -86,18 +86,18 @@ if (contactForm) {
             });
             
             if (response.ok) {
-                formStatus.textContent = "Thank you! Your inquiry has been sent.";
+                formStatus.textContent = "감사합니다! 문의가 성공적으로 전송되었습니다.";
                 formStatus.className = "success";
                 contactForm.reset();
             } else {
                 const result = await response.json();
                 formStatus.textContent = result.errors ? 
                     result.errors.map(error => error.message).join(", ") : 
-                    "Oops! There was a problem submitting your form";
+                    "죄송합니다. 문의 전송 중 오류가 발생했습니다.";
                 formStatus.className = "error";
             }
         } catch (error) {
-            formStatus.textContent = "Oops! There was a problem submitting your form";
+            formStatus.textContent = "죄송합니다. 문의 전송 중 네트워크 오류가 발생했습니다.";
             formStatus.className = "error";
         } finally {
             submitBtn.textContent = originalBtnText;

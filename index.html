@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>로또 번호 생성기</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
             <i class="fas fa-sun"></i>
         </button>
-        <h1>Lotto Number Generator</h1>
+        <h1>로또 번호 생성기</h1>
         <div class="numbers-container">
             <div class="number"></div>
             <div class="number"></div>
@@ -21,21 +21,36 @@
             <div class="number"></div>
             <div class="number"></div>
         </div>
-        <button id="generate-btn">Generate Numbers</button>
+        <button id="generate-btn">번호 생성하기</button>
 
         <div class="contact-section">
             <hr>
-            <h3>Affiliate Inquiry</h3>
+            <h3>제휴 및 서비스 문의</h3>
             <form action="https://formspree.io/f/xlgwaaqo" method="POST" id="contact-form">
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="email" placeholder="이메일 주소" required>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="Your Inquiry Message" required></textarea>
+                    <textarea name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Send Inquiry</button>
+                <button type="submit" class="submit-btn">문의 보내기</button>
             </form>
             <div id="form-status"></div>
+        </div>
+
+        <div class="comments-section">
+            <hr>
+            <h3>댓글</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://product-gam.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>댓글을 확인하려면 자바스크립트를 활성화해주세요. <a href="https://disqus.com/?ref_noscript">Disqus 제공 댓글 서비스</a></noscript>
         </div>
     </div>
     <script src="main.js"></script>

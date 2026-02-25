@@ -1,25 +1,28 @@
-# Project Overview: Lottery Number Generator
+# Project Overview: 로또 번호 생성기 (Lottery Number Generator)
 
-A modern, simple, and visually appealing web application that generates random lottery numbers (1-45).
+현대적이고 심플하며 시각적으로 매력적인 웹 기반 로또 번호 생성기(1-45)입니다.
 
-## Features
-- **Random Number Generation:** Generates 6 unique numbers between 1 and 45.
-- **Dynamic Styling:** Numbers are color-coded based on their value ranges (consistent with common lottery patterns).
-- **Responsive Design:** Works perfectly on both desktop and mobile devices.
-- **Dark/Light Mode:** Support for theme switching with persistence using `localStorage`.
-- **Modern UI:** Uses CSS variables, gradients, and smooth transitions for a premium feel.
-- **Affiliate Inquiry Form:** Integrated with Formspree to receive inquiries via email.
+## 주요 기능
+- **무작위 번호 생성:** 1부터 45 사이의 고유한 번호 6개를 생성합니다.
+- **동적 스타일링:** 번호 범위에 따라 색상을 다르게 표시합니다 (로또 공식 색상 적용).
+- **반응형 디자인:** 데스크톱과 모바일 기기 모두에서 완벽하게 작동합니다.
+- **다크/화이트 모드:** 테마 전환 기능을 지원하며 사용자의 선택을 저장합니다.
+- **제휴 문의 폼:** Formspree를 연동하여 이메일로 제휴 및 서비스 문의를 받습니다.
+- **댓글 기능:** Disqus를 통합하여 사용자 간 소통이 가능합니다.
+- **완전한 한글화:** 모든 UI 및 안내 메시지가 한국어로 제공됩니다.
 
-## Technical Details
-- **Frontend:** Vanilla HTML5, CSS3 (Modern Baseline features), and JavaScript (ES6+).
-- **Theme Management:** Utilizes CSS variables and a body-level class (`.dark-mode`) toggled via JavaScript.
-- **Form Handling:** Uses the `fetch` API to submit form data to Formspree asynchronously without page reloads.
+## 기술적 세부 사항
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+).
+- **테마 관리:** CSS 변수 및 JavaScript를 통한 실시간 테마 변경 및 `localStorage` 저장.
+- **문의 처리:** `fetch` API를 사용하여 비동기적으로 Formspree에 데이터 전송.
+- **댓글 시스템:** Disqus Universal Code 삽입을 통한 소셜 댓글 서비스 제공.
 
-## Plan & Progress
-1. [x] Basic HTML structure and styling.
-2. [x] Random number generation logic.
-3. [x] Range-based color coding for numbers.
-4. [x] Add Dark/Light mode support.
-5. [x] Implement theme persistence.
-6. [x] **Add Affiliate Inquiry Form (Formspree).**
-7. [ ] Add animation for number appearance.
+## 진행 상황
+1. [x] 기본 HTML 구조 및 스타일링.
+2. [x] 무작위 번호 생성 로직 구현.
+3. [x] 번호 범위별 색상 코드 적용.
+4. [x] 다크/화이트 모드 지원.
+5. [x] 테마 설정 저장 기능.
+6. [x] 제휴 문의 폼 (Formspree) 연동.
+7. [x] **Disqus 댓글 기능 추가.**
+8. [x] **전체 UI 한글화 완료.**
