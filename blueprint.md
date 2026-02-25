@@ -1,27 +1,23 @@
+# Project Overview: Lottery Number Generator
 
-# Lottery Number Generator
+A modern, simple, and visually appealing web application that generates random lottery numbers (1-45).
 
-## Overview
+## Features
+- **Random Number Generation:** Generates 6 unique numbers between 1 and 45.
+- **Dynamic Styling:** Numbers are color-coded based on their value ranges (consistent with common lottery patterns).
+- **Responsive Design:** Works perfectly on both desktop and mobile devices.
+- **Dark/Light Mode:** Support for theme switching with persistence using `localStorage`.
+- **Modern UI:** Uses CSS variables, gradients, and smooth transitions for a premium feel.
 
-This project is a simple web application that generates random lottery numbers. It's built with modern HTML, CSS, and JavaScript, following the guidelines for creating a visually appealing and user-friendly experience.
+## Technical Details
+- **Frontend:** Vanilla HTML5, CSS3 (Modern Baseline features), and JavaScript (ES6+).
+- **Theme Management:** Utilizes CSS variables and a body-level class (`.dark-mode`) toggled via JavaScript.
+- **State Persistence:** User's theme preference is saved in the browser's `localStorage`.
 
-## Project Outline
-
-### Design and Features
-
-*   **Layout:** A clean, centered layout that is mobile-responsive.
-*   **Typography:** Expressive fonts to create a clear visual hierarchy.
-*   **Color Palette:** A vibrant color scheme to create an energetic look and feel.
-*   **UI Components:**
-    *   A "Generate Numbers" button with a modern, interactive design.
-    *   Placeholders for the generated lottery numbers, styled as visually distinct elements.
-*   **Functionality:**
-    *   Clicking the "Generate Numbers" button will produce 6 unique random numbers between 1 and 45.
-    *   The generated numbers will be displayed in the designated placeholders.
-
-## Current Task: Initial Setup
-
-*   **index.html:** Create the basic structure of the page, including a title, a heading, a button to generate the numbers, and a container to display them.
-*   **style.css:** Add styles for the layout, typography, button, and number containers.
-*   **main.js:** Implement the JavaScript logic to generate and display the lottery numbers when the button is clicked.
-
+## Plan & Progress
+1. [x] Basic HTML structure and styling.
+2. [x] Random number generation logic.
+3. [x] Range-based color coding for numbers.
+4. [x] **Add Dark/Light mode support.**
+5. [x] Implement theme persistence.
+6. [ ] Add animation for number appearance.
