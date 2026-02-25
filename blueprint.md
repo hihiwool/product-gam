@@ -8,16 +8,18 @@ A modern, simple, and visually appealing web application that generates random l
 - **Responsive Design:** Works perfectly on both desktop and mobile devices.
 - **Dark/Light Mode:** Support for theme switching with persistence using `localStorage`.
 - **Modern UI:** Uses CSS variables, gradients, and smooth transitions for a premium feel.
+- **Affiliate Inquiry Form:** Integrated with Formspree to receive inquiries via email.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3 (Modern Baseline features), and JavaScript (ES6+).
 - **Theme Management:** Utilizes CSS variables and a body-level class (`.dark-mode`) toggled via JavaScript.
-- **State Persistence:** User's theme preference is saved in the browser's `localStorage`.
+- **Form Handling:** Uses the `fetch` API to submit form data to Formspree asynchronously without page reloads.
 
 ## Plan & Progress
 1. [x] Basic HTML structure and styling.
 2. [x] Random number generation logic.
 3. [x] Range-based color coding for numbers.
-4. [x] **Add Dark/Light mode support.**
+4. [x] Add Dark/Light mode support.
 5. [x] Implement theme persistence.
-6. [ ] Add animation for number appearance.
+6. [x] **Add Affiliate Inquiry Form (Formspree).**
+7. [ ] Add animation for number appearance.

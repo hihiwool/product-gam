@@ -60,3 +60,48 @@ generateBtn.addEventListener('click', generateNumbers);
 
 // Generate numbers on initial load
 document.addEventListener('DOMContentLoaded', generateNumbers);
+
+// --- Formspree Contact Form Handling ---
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+        
+        // Visual feedback
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                formStatus.textContent = "Thank you! Your inquiry has been sent.";
+                formStatus.className = "success";
+                contactForm.reset();
+            } else {
+                const result = await response.json();
+                formStatus.textContent = result.errors ? 
+                    result.errors.map(error => error.message).join(", ") : 
+                    "Oops! There was a problem submitting your form";
+                formStatus.className = "error";
+            }
+        } catch (error) {
+            formStatus.textContent = "Oops! There was a problem submitting your form";
+            formStatus.className = "error";
+        } finally {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
+}
